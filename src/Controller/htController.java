@@ -12,7 +12,7 @@ import Services.UserService;
 
 import java.util.List;
 
-public class htController {
+public class htController  {
    PhysicalActivityService physicalActivityService;
    UserService userService;
    RemainderService remainderService;

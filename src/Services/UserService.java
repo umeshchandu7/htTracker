@@ -1,5 +1,7 @@
 package Services;
 
+import Exceptions.loginFailed;
+import Exceptions.userAlreadyExist;
 import Models.User;
 import Repositories.UserRepository;
 
@@ -25,6 +27,10 @@ public class UserService {
         User user = new User();
         System.out.println("Enter USERNAME");
         String userName = sc.nextLine();
+        if(userRepository.getUserMap().get(userName)!=null)
+        {
+            throw new userAlreadyExist("user already exist");
+        }
         user.setUserName(userName);
         System.out.println("ENTER  NAME");
         String name = sc.nextLine();
@@ -46,6 +52,11 @@ public class UserService {
             System.out.println("LOGIN SUCCESSFULL");
             return user;
         }
-        return null;
+        else
+        {
+
+            throw new loginFailed("login failed");
+        }
+
     }
 }

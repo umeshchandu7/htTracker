@@ -1,6 +1,7 @@
 package Services;
 
 import Dtos.ActivityDtos;
+import Exceptions.physicalActivityNotSet;
 import Models.*;
 import Repositories.PhysicalActivityRepository;
 import Strategies.ActivityStrategyFactory;
@@ -52,6 +53,10 @@ public class PhysicalActivityService {
     public void howyouWorkoutforDay(User user)
     {
         PhyscialActivity physcialActivity = user.getPhyscialActivity();
+        if(physcialActivity==null)
+        {
+            throw new physicalActivityNotSet("physcial Activity nt set fot the user");
+        }
         for(int i=0;i<physcialActivity.getActivity().size();i++)
         {
             physcialActivity.getActivity().get(i).targetYouMake(user);
