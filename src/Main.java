@@ -20,6 +20,6 @@ public class Main {
         RemainderRepository remainderRepository = new RemainderRepository();
         PhysicalActivityRepository physicalActivityRepository = new PhysicalActivityRepository();
         htController htController = new htController(physicalActivityRepository,remainderRepository,userRepository);
-
+        htController.signUp();
     }
 }

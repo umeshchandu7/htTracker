@@ -1,0 +1,41 @@
+
+                                HealthTracker
+
+   this application includes features like adding RemainderList at the age of 65 plus
+   there might be slight memory loss to avoid we use this feature. this feature as funtionalities like
+   add a remainder or todo list . another funcionality is it will display the upcoming task to be done
+   this application includes another feature that is physicalActivity at age of 65 plus to
+   stay fit we include this feature
+   this feature had functionality like desgining you physcicalActivity routine
+   and another functionality it has is you have to enter the value for activities you have
+   designed for how much time do you have workout it will display status of your workout
+
+    in main there is contoller it has functionalities like
+
+    method 1:
+    when call following method signUp
+    contoller.signUp()
+    it will ask you about following details to enter if user already exist it will throw excption
+    or else it will create account
+
+    method 2:
+    contoller .login(String userName, String email)
+    it will verify given userName and pasword  correct or not
+
+    method 3:
+    contoller.addRemainder(User user)
+    it will ask you details about Remainder like title, description and Settime we need to enter hours and minutes at time to set remainder
+
+    method 4:
+    contoller.displayUpcomingTodos(User user, SetTime setTime)
+    it display upcoming todo to be done and we need to set current time in hours and minutes like new SetTime(10,30);
+
+    method 5:
+    contoller.designingOwnPhyisclActivityForADay(User user)
+    it will display like of task then it will ask you how many task to be added later you need to enter required task id
+    and for each task you need to set hour and min time to workout
+
+    method 6:
+    controller.howYouWorkourForaDay(User user)
+    it will ask you about how much time do you workout for task you have set and we need enter hour and min for each task
+    will display status for each task
